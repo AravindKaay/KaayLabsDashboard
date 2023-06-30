@@ -1,0 +1,85 @@
+.work-container{
+    margin: 0 10px 10px 10px;
+    display: flex;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.work-overview-container{
+    display: flex;
+    height: 280px;
+    background-color: white;
+    width:780px;
+    border-radius: 10px;
+   
+}
+
+.overview-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    
+}
+
+.card-container{
+    display: flex;
+}
+
+.card{
+    display: flex;
+}
+
+.work-icon ,.workBook-icon, .workApproved-icon{
+    height: 40px;
+    width: 40px;
+    border-radius: 25px;
+    padding: 5px;
+    font-size: 15px;
+}
+
+.work-icon{
+    background-color: aquamarine;
+   
+}
+
+.workBook-icon{
+    background-color:rgb(252, 217, 172);
+   
+}
+.workApproved-icon{
+    background-color: azure;
+}
+
+.card-block{
+    margin-right: 30px;
+}
+
+.vertical-line{
+    border-left: 2px solid rgb(182, 184, 182);
+    height: 260px;
+    margin-top: 5px;
+}
+
+.recharts-legend-item {
+    margin-bottom: 22px;
+    margin-left: -15px;
+   
+   
+ }
+
+ .second-chart{
+    background-color: white;
+    height: 280px;
+    margin-left: 10px;
+    border-radius: 10px;
+ }
+
+ p{
+    font-size: 14px;
+ }
+
+ .chart-heading{
+    font-size: 16px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+ }

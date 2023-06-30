@@ -1,0 +1,25 @@
+
+
+.user-info-main-container{
+    display: flex;
+    margin: 20px;
+    justify-content: space-between;
+}
+
+.location-dropdown{
+    width:150px;
+    height:30px;
+    padding-left: 20px;
+
+}
+
+.location-icon{
+    margin-right: -10px;
+    z-index: 1;
+}
+
+.location-calender-container{
+    display: flex;
+    width:600px;
+    justify-content: space-around;
+}
