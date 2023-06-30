@@ -9,7 +9,7 @@ const {Option}=Select
 
 const TaskHeaderBlock = () => {
   const [activeHeader,setActiveHeader]=useState(1)
-  const {filterOption,setFilterOption,selectFilter,setSelectFilter}=useContext(AppContext)
+  const {filterOption,setFilterOption,setFilterOpt}=useContext(AppContext)
   return (
     <div >
         <h3 style={{marginLeft:"25px"}}>My Tasks</h3>
@@ -29,7 +29,7 @@ const TaskHeaderBlock = () => {
                 <Option value="Approved">Approved</Option>
 
              </Select>
-             <button type="button" className='filter-button' onClick={()=>setSelectFilter(!selectFilter)}>Filter</button>
+             <button type="button" className='filter-button' onClick={()=>setFilterOpt(1)}>Filter</button>
         </div>
     </div>
     </div>

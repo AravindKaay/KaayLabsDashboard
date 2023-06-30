@@ -67,6 +67,15 @@ const data = [
     Action:"Modify Estimate",
    
   },
+  {
+    key: '3',
+    Nameofwork:"Work name 109",
+    Workcode:10009,
+    Workcategory:"Maintenance",
+    Status:"New",
+    Action:"Modify Estimate",
+   
+  }
   
 ];
 
@@ -82,11 +91,16 @@ const rowSelection = {
   };
 
 const TaskList = () => {
-  const {filterOption,selectFilter}=useContext(AppContext)
-  let filteredData
+  const {filterOption,filterOpt,setFilterOpt}=useContext(AppContext)
+  console.log(filterOpt)
+  
   const len=filterOption.length
   
-  const filterMap=filterOption[len-1]
+  const filterMap=filterOption[len-1] ||[]
+  console.log()
+  
+  let filteredData =data.filter(each=> filterMap.includes(each.Status));
+
   
   
   
@@ -94,7 +108,8 @@ const TaskList = () => {
   
     return (
       <div className='list-container'>
-        {selectFilter===true?filteredData=data.filter(each=> filterOption.includes(each.Status)):""}
+        {filterMap.length===0?setFilterOpt(null):""}
+        
         
   
         <Divider />
@@ -105,7 +120,7 @@ const TaskList = () => {
             ...rowSelection,
           }}
           columns={columns}
-          dataSource={selectFilter===true?filteredData:data}
+          dataSource={filterOpt!==null?filteredData:data}
           pagination={false}
         />
       </div>

@@ -20,12 +20,13 @@ export const AppContext=createContext({
 const App=()=>{
   const [sideBar,setSideBar]=useState(false)
   const [filterOption,setFilterOption]=useState([])
-  const [selectFilter,setSelectFilter]=useState(false)
+  const [filterOpt,setFilterOpt]=useState(null)
+  
   const sideBarHeight=sideBar===true?"100vh":"10vh"
 
   
    return(
-    <AppContext.Provider value={{filterOption,setFilterOption,selectFilter,setSelectFilter}}>
+    <AppContext.Provider value={{filterOption,setFilterOption,filterOpt,setFilterOpt}}>
     <div className='app-main-container'>
          <div className='header-main-container'>
               <div className='sidebar-container' style={{height:sideBarHeight}}>
